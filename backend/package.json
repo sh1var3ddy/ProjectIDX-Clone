@@ -1,13 +1,14 @@
 {
   "name": "backend",
-  "version":"1.0.0",
+  "version": "1.0.0",
   "main": "index,js",
   "type": "module",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "cookie-parser": "^1.4.7"
+    "uuid4": "^2.0.3"
   },
   "devDependencies": {
     "cookie-parser": "^1.4.7",
