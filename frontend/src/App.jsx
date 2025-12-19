@@ -1,12 +1,10 @@
-import { Route, Routes } from "react-router-dom"
-import { CreateProject } from "./components/pages/CreateProject"
-
+import { Router } from "./Router.jsx";
 function App() {
 
   return (
-    <Routes>
-      <Route path= "/" element = {<CreateProject/>}/>
-    </Routes>
+    <>
+      <Router/>
+    </>
   )
 }
 
