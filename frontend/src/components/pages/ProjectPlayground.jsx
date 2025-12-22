@@ -19,13 +19,25 @@ export const ProjectPlayGround = () => {
         <>
             Project Id: {projectId}
             {projectId &&
-                <>
-                    <EditorComponent />
-                    <EditorButton isActive={true} />
-                    <EditorButton isActive={false} />
+                <div
+                    style={{
+                        backgroundColor: "#333254",
+                        paddingRight: "10px",
+                        paddingTop: "0.3vh",
+                        minWidth: "250px",
+                        maxWidth: "25%",
+                        height: "99.7vh",
+                        overflow: "auto"
+                    }}
+                >
                     <TreeStructure />
-                </>
+                </div>
             }
+            <EditorComponent />
+            <EditorButton isActive={true} />
+            <EditorButton isActive={false} />
+
+
         </>
     )
 }

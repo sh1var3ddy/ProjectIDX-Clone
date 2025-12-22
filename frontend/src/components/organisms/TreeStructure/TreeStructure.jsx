@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTreeStructureStore } from "../../../store/treeStructureStore";
 import { useProjectTree } from "../../../hooks/apis/queries/useProjectTree";
+import { TreeNode } from "../../molecules/TreeNode/TreeNode.jsx";
+
 
 export const TreeStructure = () => {
     const { projectId } = useParams();
@@ -21,5 +23,10 @@ export const TreeStructure = () => {
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: {String(error?.message ?? error)}</div>;
 
-    return <div>{JSON.stringify(projectTree)}</div>;
+    return (
+        <div>
+            <TreeNode fileFolderData={projectTree} />
+
+        </div>
+    );
 };
